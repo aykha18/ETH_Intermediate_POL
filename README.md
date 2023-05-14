@@ -15,8 +15,7 @@ How to use require, revert and assert methods in SmartContracts. Each examples t
 
 
 ### Executing program
-There are 3 Contracts:
-**require_test.sol**
+**require_test.sol**:
 This contract provides a simple parking ticket system where users can buy tickets by sending Ether to the contract, and the contract keeps track of the parking balances of each address.
 Here's an explanation of the code:
 
@@ -35,7 +34,7 @@ Here's an explanation of the code:
 
 * If both require statements pass, the parking balance of the contract is reduced by amount, and the parking balance of the message sender (msg.sender) is increased by amount.
 
-**revert.sol**
+**revert.sol**:
 This is a smart contract named VotingList that keeps track of the population and voter registratio in different cities.
 * uint public totalPopulation = 30000;: Declares a public state variable totalPopulation and initializes it with a value of 30000, representing the total population limit.
 
@@ -57,7 +56,7 @@ This is a smart contract named VotingList that keeps track of the population and
 
 * The final require statement checks if cityexist is false (indicating that the provided city does not exist in the cities array) or if currentPopulation is greater than or equal to totalPopulation. If either condition is true, it reverts the transaction and displays the error message "Something Went Wrong...".
 
-**assert_test.sol**
+**assert_test.sol**:
 This is a smart contract named AssertExample that demonstrates the use of assert in Solidity.
 * function divide(uint numerator, uint denominator) public pure returns (uint): This function takes two input parameters, numerator and denominator, and performs division. It is defined as pure to indicate that it does not modify the contract's state and only returns a value.
 
